@@ -24,8 +24,11 @@ public class GamePlayUI : Singleton<GamePlayUI>
 		}
 	}
 
-
-
+	public void ShowShop()
+	{
+		StackManager.Instance.SpawnUIScreen ("Shop");
+	}
+	
 	public void ShowAlert()
 	{
 		alertWindow.SetActive (true);

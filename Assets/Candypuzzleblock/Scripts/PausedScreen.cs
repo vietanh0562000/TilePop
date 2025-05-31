@@ -59,6 +59,7 @@ public class PausedScreen : MonoBehaviour
 
 	/// <summary>
 	/// Raises the close button pressed event.
+	/// 
 	/// </summary>
 	public void OnCloseButtonPressed ()
 	{

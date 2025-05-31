@@ -302,6 +302,13 @@ public class GamePlay : Singleton<GamePlay>,IPointerDownHandler,IPointerUpHandle
 		BlockShapeSpawner.Instance.ResetShapeContainer();
 	}
 
+	public void ClearMap()
+	{
+		foreach (Block b in blockGrid) {
+			b.ClearBlock(currentID);
+		}
+	}
+
 	/// <summary>
 	/// Gets the entire row.
 	/// </summary>
