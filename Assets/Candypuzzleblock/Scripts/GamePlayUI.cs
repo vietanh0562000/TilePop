@@ -18,7 +18,7 @@ public class GamePlayUI : Singleton<GamePlayUI>
 	}
 
 	public void OnPauseButtonPressed(){
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.SpawnUIScreen ("Paused");
 		}

@@ -61,7 +61,7 @@ public class SelectMode : MonoBehaviour
 
 	public void OnClassicButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			GameController.gameMode = GameMode.CLASSIC;
 			StackManager.Instance.LoadGamePlayFromModeSelection ();
@@ -70,7 +70,7 @@ public class SelectMode : MonoBehaviour
 
 	public void OnTimedButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			GameController.gameMode = GameMode.TIMED;
 			StackManager.Instance.LoadGamePlayFromModeSelection ();
@@ -79,7 +79,7 @@ public class SelectMode : MonoBehaviour
 
 	public void OnBlastButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			GameController.gameMode = GameMode.BLAST;
 			StackManager.Instance.LoadGamePlayFromModeSelection ();
@@ -88,7 +88,7 @@ public class SelectMode : MonoBehaviour
 
 	public void OnAdvanceButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			GameController.gameMode = GameMode.ADVANCE;
 			StackManager.Instance.LoadGamePlayFromModeSelection ();
@@ -97,7 +97,7 @@ public class SelectMode : MonoBehaviour
 
 	public void OnHexaButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			GameController.gameMode = GameMode.CHALLENGE;
 			StackManager.Instance.LoadGamePlayFromModeSelection ();
@@ -106,7 +106,7 @@ public class SelectMode : MonoBehaviour
 
 	public void OnCloseButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.OnCloseButtonPressed ();
 		}

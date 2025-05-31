@@ -248,7 +248,7 @@ public class StackManager : Singleton<StackManager>
 	{
 		///Detects the back button press event.
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			if (InputManager.Instance.canInput ()) {
+			if (InputManager.Instance.CanInput ()) {
 				OnBackButtonPressed ();
 			}
 		}

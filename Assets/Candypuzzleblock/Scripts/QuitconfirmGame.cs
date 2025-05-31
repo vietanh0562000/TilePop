@@ -8,7 +8,7 @@ public class QuitconfirmGame : MonoBehaviour
 	/// </summary>
 	public void OnStayButtonPressed ()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.OnCloseButtonPressed ();
 		}
@@ -19,7 +19,7 @@ public class QuitconfirmGame : MonoBehaviour
 	/// </summary>
 	public void OnQuitButtonPressed ()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			GameController.Instance.QuitGame ();
 			StackManager.Instance.OnCloseButtonPressed ();

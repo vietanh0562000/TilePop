@@ -35,7 +35,7 @@ public class Rescue : MonoBehaviour
 			//Init this with ad network's status of ad is available or not.
 			bool isAdsAvailable = false;
 
-			if(isAdsAvailable &&  GamePlay.Instance.isFreeRescueAvailable())
+			if(isAdsAvailable &&  GamePlay.Instance.IsFreeRescueAvailable())
 			{
 				btnWatchVideo.interactable = true;
 				btnWatchVideo.GetComponent<CanvasGroup>().alpha = 1F;
@@ -61,7 +61,7 @@ public class Rescue : MonoBehaviour
 
 	public void OnCloseButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			GamePlay.Instance.OnRescueDiscarded ();
 		}
@@ -69,7 +69,7 @@ public class Rescue : MonoBehaviour
 
 	public void OnRescueUsingWatchVideo()
 	{
-		if (InputManager.Instance.canInput ()) 
+		if (InputManager.Instance.CanInput ()) 
 		{
 			//CALL YOUR AD NETWORK VIDEO AD HERE TO RESCUE USING WATCH VIDEO.
 		}
@@ -77,7 +77,7 @@ public class Rescue : MonoBehaviour
 
 	public void OnRescueUsingCoins()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			bool coinDeduced = CurrencyManager.Instance.deductBalance (200);
 
 			if (coinDeduced) {

@@ -19,7 +19,7 @@ public class MusicButton : MonoBehaviour
 	void Start()
 	{
 		btnMusic.onClick.AddListener(() => {
-			if (InputManager.Instance.canInput ()) {
+			if (InputManager.Instance.CanInput ()) {
 				AudioManager.Instance.PlayButtonClickSound ();
 				AudioManager.Instance.ToggleMusicStatus	();
 			}

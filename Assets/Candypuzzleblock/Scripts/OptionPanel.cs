@@ -9,7 +9,7 @@ public class OptionPanel : MonoBehaviour
 	/// </summary>
 	public void OnSettingsButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.SpawnUIScreen ("Settings", true);
 		}
@@ -20,7 +20,7 @@ public class OptionPanel : MonoBehaviour
 	/// </summary>
 	public void OnMessagesButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 		}
 	}
@@ -30,7 +30,7 @@ public class OptionPanel : MonoBehaviour
 	/// </summary>
 	public void OnRateButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 
 			if (GameController.Instance.isInternetAvailable ()) {
@@ -44,7 +44,7 @@ public class OptionPanel : MonoBehaviour
 	/// </summary>
 	public void OnShopButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.SpawnUIScreen ("Shop", true);	
 		}
@@ -64,7 +64,7 @@ public class OptionPanel : MonoBehaviour
 	/// </summary>
 	public void OnShareButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 		}
 	}

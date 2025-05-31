@@ -34,4 +34,9 @@ public class GameController : Singleton<GameController>
 		Application.Quit ();
 		#endif
 	}
+
+	public void TryUseResetPower()
+	{
+		GamePlay.Instance.ResetShape();	
+	}
 }

@@ -6,7 +6,7 @@ public class Settings : MonoBehaviour
 {
 	public void OnRateButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
             #if UNITY_EDITOR
             Application.OpenURL("https://play.google.com/store/apps/details?id=com.ponygames.MagicBlockPuzzle");
@@ -22,14 +22,14 @@ public class Settings : MonoBehaviour
 
 	public void OnCloseButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.OnCloseButtonPressed ();
 		}
 	}
 
 	public void OnSelectLanguageButtonPressed(){
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 
 			GameObject currentWindow = StackManager.Instance.PeekWindow ();
 			StackManager.Instance.PopWindow ();

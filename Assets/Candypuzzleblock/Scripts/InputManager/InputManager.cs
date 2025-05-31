@@ -26,7 +26,7 @@ public class InputManager : Singleton<InputManager>
 	/// <returns><c>true</c>, if input was caned, <c>false</c> otherwise.</returns>
 	/// <param name="delay">Delay.</param>
 	/// <param name="disableOnAvailable">If set to <c>true</c> disable on available.</param>
-	public bool canInput (float delay = 0.25F, bool disableOnAvailable = true)
+	public bool CanInput (float delay = 0.25F, bool disableOnAvailable = true)
 	{
 		bool status = isTouchAvailable;
 		if (status && disableOnAvailable) {

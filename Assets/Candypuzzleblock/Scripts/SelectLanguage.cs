@@ -37,7 +37,7 @@ public class SelectLanguage : MonoBehaviour
 
 	public void OnCloseButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.OnCloseButtonPressed ();
 		}

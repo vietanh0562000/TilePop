@@ -297,6 +297,11 @@ public class GamePlay : Singleton<GamePlay>,IPointerDownHandler,IPointerUpHandle
 		}
 	}
 
+	public void ResetShape()
+	{
+		BlockShapeSpawner.Instance.ResetShapeContainer();
+	}
+
 	/// <summary>
 	/// Gets the entire row.
 	/// </summary>
@@ -508,25 +513,25 @@ public class GamePlay : Singleton<GamePlay>,IPointerDownHandler,IPointerUpHandle
 	void ExecuteRescue()
 	{
 		if (GamePlayUI.Instance.currentGameOverReson == GameOverReason.OUT_OF_MOVES) {
-			int TotalBreakingColumns = 3;
-			int TotalBreakingRows = 3;
+			int totalBreakingColumns = 3;
+			int totalBreakingRows = 3;
 
 			int totalColumns = GameBoardGenerator.Instance.TotalColumns;
 			int totalRows = GameBoardGenerator.Instance.TotalRows;
 
-            int startingColumn = (int)((totalColumns / 2F) - (TotalBreakingColumns / 2F));
+            int startingColumn = (int)((totalColumns / 2F) - (totalBreakingColumns / 2F));
             //int startingColumn = Random.Range(0, totalColumns - TotalBreakingColumns);
-            int startingRow = (int)((totalRows / 2F) - (TotalBreakingRows / 2F));
+            int startingRow = (int)((totalRows / 2F) - (totalBreakingRows / 2F));
 
 			List<List<Block>> breakingColums = new List<List<Block>> ();
 
-			for (int columnIndex = startingColumn; columnIndex <= (startingColumn + (TotalBreakingColumns - 1)); columnIndex++) {
+			for (int columnIndex = startingColumn; columnIndex <= (startingColumn + (totalBreakingColumns - 1)); columnIndex++) {
 				breakingColums.Add (GetEntireColumnForRescue (columnIndex));
 			}
 
 			List<List<Block>> breakingRows = new List<List<Block>> ();
 
-			for (int rowIndex = startingRow; rowIndex <= (startingRow + (TotalBreakingRows - 1)); rowIndex++) {
+			for (int rowIndex = startingRow; rowIndex <= (startingRow + (totalBreakingRows - 1)); rowIndex++) {
 				breakingRows.Add (GetEntireRowForRescue (rowIndex));
 			}
 			StartCoroutine (BreakAllCompletedLines (breakingRows, breakingColums, 0));
@@ -558,27 +563,27 @@ public class GamePlay : Singleton<GamePlay>,IPointerDownHandler,IPointerUpHandle
 
     public void InstantRescue()
     {
-        int TotalBreakingColumns = 3;
-        int TotalBreakingRows = 3;
+        int totalBreakingColumns = 3;
+        int totalBreakingRows = 3;
 
         int totalColumns = GameBoardGenerator.Instance.TotalColumns;
         int totalRows = GameBoardGenerator.Instance.TotalRows;
 
         //int startingColumn = (int)((totalColumns / 2F) - (TotalBreakingColumns / 2F));
-        int startingColumn = Random.Range(0, totalColumns - TotalBreakingColumns);
+        int startingColumn = Random.Range(0, totalColumns - totalBreakingColumns);
         //int startingRow = (int)((totalRows / 2F) - (TotalBreakingRows / 2F));
-        int startingRow = Random.Range(0, totalRows - TotalBreakingRows);
+        int startingRow = Random.Range(0, totalRows - totalBreakingRows);
 
         List<List<Block>> breakingColums = new List<List<Block>>();
 
-        for (int columnIndex = startingColumn; columnIndex <= (startingColumn + (TotalBreakingColumns - 1)); columnIndex++)
+        for (int columnIndex = startingColumn; columnIndex <= (startingColumn + (totalBreakingColumns - 1)); columnIndex++)
         {
             breakingColums.Add(GetEntireColumnForRescue(columnIndex));
         }
 
         List<List<Block>> breakingRows = new List<List<Block>>();
 
-        for (int rowIndex = startingRow; rowIndex <= (startingRow + (TotalBreakingRows - 1)); rowIndex++)
+        for (int rowIndex = startingRow; rowIndex <= (startingRow + (totalBreakingRows - 1)); rowIndex++)
         {
             breakingRows.Add(GetEntireRowForRescue(rowIndex));
         }
@@ -589,7 +594,7 @@ public class GamePlay : Singleton<GamePlay>,IPointerDownHandler,IPointerUpHandle
 	/// Ises the free rescue available.
 	/// </summary>
 	/// <returns><c>true</c>, if free rescue available was ised, <c>false</c> otherwise.</returns>
-	public bool isFreeRescueAvailable()
+	public bool IsFreeRescueAvailable()
 	{
 		if((TotalFreeRescueDone < MaxAllowedVideoWatchRescue) || (MaxAllowedVideoWatchRescue < 0))
 		{

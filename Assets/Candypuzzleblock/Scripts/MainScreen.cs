@@ -18,7 +18,7 @@ public class MainScreen : UIScreen
 	/// </summary>
 	public void OnPlayButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.SpawnUIScreen ("SelectMode");
 		}

@@ -12,7 +12,7 @@ public class HelpPopup : MonoBehaviour
 	/// </summary>
 	public void OnCloseButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.OnCloseButtonPressed ();
 		}

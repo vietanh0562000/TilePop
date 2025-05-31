@@ -37,7 +37,7 @@ public class PausedScreen : MonoBehaviour
 	/// </summary>
 	public void OnHomeButtonPressed ()
 	{
-		if (InputManager.Instance.canInput ()) 
+		if (InputManager.Instance.CanInput ()) 
 		{
 			hasGameExit = true;
 			AudioManager.Instance.PlayButtonClickSound ();
@@ -51,7 +51,7 @@ public class PausedScreen : MonoBehaviour
 	/// </summary>
 	public void OnResetButtonPressed ()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.RestartGamePlay ();
 		}
@@ -62,7 +62,7 @@ public class PausedScreen : MonoBehaviour
 	/// </summary>
 	public void OnCloseButtonPressed ()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.OnCloseButtonPressed ();
 		}

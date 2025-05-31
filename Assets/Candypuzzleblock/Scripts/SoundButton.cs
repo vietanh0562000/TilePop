@@ -20,7 +20,7 @@ public class SoundButton : MonoBehaviour
 	{
 		btnSound.onClick.AddListener(() => 
 		{
-			if (InputManager.Instance.canInput ()) {
+			if (InputManager.Instance.CanInput ()) {
 				AudioManager.Instance.PlayButtonClickSound ();
 				AudioManager.Instance.ToggleSoundStatus();
 			}

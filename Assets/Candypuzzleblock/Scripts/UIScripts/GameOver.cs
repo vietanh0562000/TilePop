@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour {
 
 	public void OnHomeButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.OnCloseButtonPressed ();
 		}
@@ -36,7 +36,7 @@ public class GameOver : MonoBehaviour {
 
 	public void OnReplayButtonPressed()
 	{
-		if (InputManager.Instance.canInput ()) {
+		if (InputManager.Instance.CanInput ()) {
 			AudioManager.Instance.PlayButtonClickSound ();
 			StackManager.Instance.RestartGamePlay ();
 		}
@@ -44,7 +44,7 @@ public class GameOver : MonoBehaviour {
 
     public void OnRewardedVideoButtonPressed()
     {
-        if(InputManager.Instance.canInput())
+        if(InputManager.Instance.CanInput())
         {
             AudioManager.Instance.PlayButtonClickSound();
             StackManager.Instance.ContinueGameplay();

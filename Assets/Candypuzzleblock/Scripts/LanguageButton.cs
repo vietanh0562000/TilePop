@@ -42,7 +42,7 @@ public class LanguageButton : MonoBehaviour
 	void OnEnable()
 	{
 		btnLanguage.onClick.AddListener(()=>{
-			if(InputManager.Instance.canInput())
+			if(InputManager.Instance.CanInput())
 			{
 				AudioManager.Instance.PlayButtonClickSound();
 				LocalizationManager.Instance.SetLanguage(LanguageCode);
