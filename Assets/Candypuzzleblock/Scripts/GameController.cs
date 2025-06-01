@@ -48,6 +48,7 @@ public class GameController : Singleton<GameController>
 		}
 		else
 		{
+			PlayerPrefs.SetInt("ResetPower", resetPowerQuantity - 1);
 			GamePlay.Instance.ResetShape();	
 			UpdateResetPowerQuantityText();
 		}
@@ -62,6 +63,7 @@ public class GameController : Singleton<GameController>
 		}
 		else
 		{
+			PlayerPrefs.SetInt("ClearPower", clearPowerQuantity - 1);
 			GamePlay.Instance.ClearMap();
 			UpdateClearPowerQuantityText();
 		}
