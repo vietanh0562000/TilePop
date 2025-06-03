@@ -41,14 +41,14 @@ public class PurchasingManager : MonoBehaviour
          case 5:
             IAPManager.OnPurchaseSuccess = () =>
             {
-               PlayerPrefs.SetInt("ClearPower", clearPowerQuantity + 10);
+               PlayerPrefs.SetInt("ClearPower", clearPowerQuantity + 20);
             };
             IAPManager.Instance.BuyProductID(IAPKey.PACK5);
             break;
          case 6:
             IAPManager.OnPurchaseSuccess = () =>
             {
-               PlayerPrefs.SetInt("ClearPower", clearPowerQuantity + 20);
+               PlayerPrefs.SetInt("ClearPower", clearPowerQuantity + 40);
             };
             IAPManager.Instance.BuyProductID(IAPKey.PACK6);
             break;
